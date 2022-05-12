@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script src="{{ url_for('static', filename = 'upload.js') }}"></script>
+
+<div class="container">
+  <!-- Header -->
+  <header class="w3-container w3-green w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">UPLOAD RECEIPT</h1>
+   <p class="w3-xlarge">Choose file for upload</p>
+   <form method="post" action="{{link}}" enctype="multipart/form-data">
+    <div class="box__input">
+        </dl>
+            <p>
+                <input type="file" name="files[]" multiple="true" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </div>
+   </form>
+  </header>
+
+</div>
+
+{% endblock %}

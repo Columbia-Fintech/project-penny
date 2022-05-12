@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--<script src="{{ url_for('static', filename = 'output.js') }}"></script>-->
+    
+<!-- change layout!!!!! -->
+<div class="container">
+    <div class="output">
+        <div class="printhead w3-xlarge w3-green">
+            Item Information
+        </div>
+        {% for i in range(results|length) %}
+        <form action = "{{link}}" method = "post">
+            <input type = "submit" name = "item" value = "{{ i+1 }}">{{ results[i] }}</input>
+        </form>
+        {% endfor %}
+    </div>
+   
+</div>
+
+{% endblock %}

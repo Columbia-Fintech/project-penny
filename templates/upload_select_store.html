@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script src="{{ url_for('static', filename = 'output.js') }}"></script>
+    
+<div class="container">
+    <div class="output">
+        <div class="printhead w3-xlarge w3-green">
+            Please select a store location
+        </div>
+        <br></br>
+        <table>
+            {% for i in range(names|length) %}
+            
+            <form action = "{{link}}" method = "post">
+                <tr>
+                    <td class = "w3-table-all"><input type = "submit" name = "store" value = "{{ i+1 }}">{{ names[i] }}, {{addresses[i]}}</input></td>
+                </tr>
+            </form>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--<script src="{{ url_for('static', filename = 'output.js') }}"></script>-->
+    
+<!-- change content!!! -->
+
+<div class="container">
+    <div class="output">
+        <div class="printhead w3-xlarge w3-green">
+            Price Comparison Results
+        </div>
+        <p>{{mean}}</p>
+        <p>{{stdev}}</p>
+        <p>{{item}}</p>
+        <p>{{min}}</p>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script src="{{ url_for('static', filename = 'lookup.js') }}"></script>
+
+<div class="container">
+  <!-- Header -->
+  <header class="w3-container w3-green w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">Search for an item</h1>
+   <!-- <p class="w3-xlarge">(in miles [1-100])</p> -->
+   <form name = "item" method="post" action = "{{link}}">
+        <input type="text" name="item">
+        <input type="submit" value="Search">
+    </form>
+  </header>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!--<script src="{{ url_for('static', filename = 'output.js') }}"></script>-->
+    
+
+<div class="container">
+  <!--  <div class="output">
+        <div class="printhead w3-xlarge w3-green">
+            Store Information
+        </div>
+        {{df1.to_html(classes="table table-striped")|safe}}
+    </div> -->
+    <div class="output">
+        <div class="printhead w3-xlarge w3-green">
+            Item Information
+        </div>
+        {{df2.to_html(classes="table table-striped")|safe}}
+    </div>
+    <a href = "{{link}}"><button>Compare Prices</button></a>
+</div>
+
+{% endblock %}
